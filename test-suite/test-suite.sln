@@ -131,6 +131,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CLITestBreakpoint", "CLITes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CLITestInteropBreakpoint", "CLITestInteropBreakpoint\CLITestInteropBreakpoint.csproj", "{61A32EDF-96A7-42B6-9B4B-E52D99D0E1B5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VSCodeTestEvalTimeout", "VSCodeTestEvalTimeout\VSCodeTestEvalTimeout.csproj", "{CF905929-ADD4-4BBD-A7DC-6370F95DB852}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -924,5 +926,17 @@ Global
 		{61A32EDF-96A7-42B6-9B4B-E52D99D0E1B5}.Release|x64.Build.0 = Release|Any CPU
 		{61A32EDF-96A7-42B6-9B4B-E52D99D0E1B5}.Release|x86.ActiveCfg = Release|Any CPU
 		{61A32EDF-96A7-42B6-9B4B-E52D99D0E1B5}.Release|x86.Build.0 = Release|Any CPU
+		{CF905929-ADD4-4BBD-A7DC-6370F95DB852}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF905929-ADD4-4BBD-A7DC-6370F95DB852}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF905929-ADD4-4BBD-A7DC-6370F95DB852}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{CF905929-ADD4-4BBD-A7DC-6370F95DB852}.Debug|x64.Build.0 = Debug|Any CPU
+		{CF905929-ADD4-4BBD-A7DC-6370F95DB852}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{CF905929-ADD4-4BBD-A7DC-6370F95DB852}.Debug|x86.Build.0 = Debug|Any CPU
+		{CF905929-ADD4-4BBD-A7DC-6370F95DB852}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF905929-ADD4-4BBD-A7DC-6370F95DB852}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF905929-ADD4-4BBD-A7DC-6370F95DB852}.Release|x64.ActiveCfg = Release|Any CPU
+		{CF905929-ADD4-4BBD-A7DC-6370F95DB852}.Release|x64.Build.0 = Release|Any CPU
+		{CF905929-ADD4-4BBD-A7DC-6370F95DB852}.Release|x86.ActiveCfg = Release|Any CPU
+		{CF905929-ADD4-4BBD-A7DC-6370F95DB852}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

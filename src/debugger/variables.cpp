@@ -369,7 +369,10 @@ HRESULT Variables::GetChildren(
             ToRelease<ICorDebugType> pType;
             IfFailRet(pValue2->GetExactType(&pType));
             // Note, this call could return S_FALSE without ICorDebugValue creation in case type don't have static members.
-            IfFailRet(m_sharedEvalHelpers->CreatTypeObjectStaticConstructor(pThread, pType, nullptr, false));
+            // Note, an error here is not fatal, as for a property getter in FetchFieldsAndProperties(): the eval can fail,
+            // for example with CORDBG_E_FUNC_EVAL_BAD_START_POINT while an earlier eval that timed out is still running,
+            // and the instance members must still be shown. The static members are read when they are expanded.
+            m_sharedEvalHelpers->CreatTypeObjectStaticConstructor(pThread, pType, nullptr, false);
 
             Variable var(ref.evalFlags);
             var.name = "Static members";

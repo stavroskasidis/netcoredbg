@@ -983,7 +983,8 @@ static HRESULT InternalWalkMembers(EvalHelpers *pEvalHelpers, ICorDebugValue *pI
             if (pThread)
             {
                 // Note, this call could return S_FALSE without ICorDebugValue creation in case type don't have static members.
-                IfFailRet(pEvalHelpers->CreatTypeObjectStaticConstructor(pThread, pBaseType));
+                // Note, an error here is not fatal (see Variables::GetChildren()): the base class fields are still walked.
+                pEvalHelpers->CreatTypeObjectStaticConstructor(pThread, pBaseType);
             }
             // Add fields of base class
             IfFailRet(InternalWalkMembers(pEvalHelpers, pInputValue, pThread, frameLevel, pBaseType, provideSetterData, cb));

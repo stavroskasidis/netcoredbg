@@ -94,6 +94,7 @@ ALL_TEST_NAMES=(
     "VSCodeTest中文目录"
     "VSCodeTestSrcBreakpointResolve"
     "VSCodeTestEnum"
+    "VSCodeTestEvalTimeout"
     "VSCodeTestAsyncStepping"
     "VSCodeTestBreak"
     "VSCodeTestNoJMCNoFilterStepping"
