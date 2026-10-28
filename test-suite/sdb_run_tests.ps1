@@ -49,6 +49,7 @@ $ALL_TEST_NAMES = @(
     "VSCodeTestEvalNotEnglish"
     "VSCodeTestEnum"
     "VSCodeTestEvalTimeout"
+    "VSCodeTestExceptionInfoEvalTimeout"
     "VSCodeTestAsyncStepping"
     "VSCodeTestBreak"
     "VSCodeTestNoJMCNoFilterStepping"

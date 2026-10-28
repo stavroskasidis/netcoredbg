@@ -133,6 +133,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CLITestInteropBreakpoint", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VSCodeTestEvalTimeout", "VSCodeTestEvalTimeout\VSCodeTestEvalTimeout.csproj", "{CF905929-ADD4-4BBD-A7DC-6370F95DB852}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VSCodeTestExceptionInfoEvalTimeout", "VSCodeTestExceptionInfoEvalTimeout\VSCodeTestExceptionInfoEvalTimeout.csproj", "{BDF9955B-6414-4F4F-8705-070B4612B847}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -938,5 +940,17 @@ Global
 		{CF905929-ADD4-4BBD-A7DC-6370F95DB852}.Release|x64.Build.0 = Release|Any CPU
 		{CF905929-ADD4-4BBD-A7DC-6370F95DB852}.Release|x86.ActiveCfg = Release|Any CPU
 		{CF905929-ADD4-4BBD-A7DC-6370F95DB852}.Release|x86.Build.0 = Release|Any CPU
+		{BDF9955B-6414-4F4F-8705-070B4612B847}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDF9955B-6414-4F4F-8705-070B4612B847}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDF9955B-6414-4F4F-8705-070B4612B847}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{BDF9955B-6414-4F4F-8705-070B4612B847}.Debug|x64.Build.0 = Debug|Any CPU
+		{BDF9955B-6414-4F4F-8705-070B4612B847}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BDF9955B-6414-4F4F-8705-070B4612B847}.Debug|x86.Build.0 = Debug|Any CPU
+		{BDF9955B-6414-4F4F-8705-070B4612B847}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDF9955B-6414-4F4F-8705-070B4612B847}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDF9955B-6414-4F4F-8705-070B4612B847}.Release|x64.ActiveCfg = Release|Any CPU
+		{BDF9955B-6414-4F4F-8705-070B4612B847}.Release|x64.Build.0 = Release|Any CPU
+		{BDF9955B-6414-4F4F-8705-070B4612B847}.Release|x86.ActiveCfg = Release|Any CPU
+		{BDF9955B-6414-4F4F-8705-070B4612B847}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

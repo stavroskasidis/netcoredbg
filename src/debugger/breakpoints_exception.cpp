@@ -237,21 +237,27 @@ HRESULT ExceptionBreakpoints::GetExceptionDetails(ICorDebugThread *pThread, ICor
             return S_OK;
         };
 
-        IfFailRet(Status = getMemberWithName("_message", details.message));
-        if (Status == S_OK)
+        // Note, an error reading a member is not fatal, the other members are still read: a property getter's eval can
+        // fail (for example, StackTrace's times out on a busy machine, and while an eval that could not be aborted still
+        // runs, the runtime refuses any other). The message and the inner exception are read from their fields, which
+        // need no eval.
+        if (getMemberWithName("_message", details.message) != S_FALSE)
             return S_OK;
 
-        IfFailRet(Status = getMemberWithName("StackTrace", details.stackTrace));
-        if (Status == S_OK)
+        if (getMemberWithName("StackTrace", details.stackTrace) != S_FALSE)
             return S_OK;
 
-        IfFailRet(Status = getMemberWithName("Source", details.source));
-        if (Status == S_OK)
+        if (getMemberWithName("Source", details.source) != S_FALSE)
             return S_OK;
 
-        if (memberName == "InnerException")
+        if (memberName == "_innerException")
         {
-            IfFailRet(getValue(&iCorInnerExceptionValue, defaultEvalFlags));
+            if (FAILED(getValue(&iCorInnerExceptionValue, defaultEvalFlags)))
+            {
+                iCorInnerExceptionValue.Free();
+                return S_OK;
+            }
+
             BOOL isNull = FALSE;
             ToRelease<ICorDebugReferenceValue> iCorReferenceValue;
             if (SUCCEEDED(iCorInnerExceptionValue->QueryInterface(IID_ICorDebugReferenceValue, (LPVOID*) &iCorReferenceValue)) &&

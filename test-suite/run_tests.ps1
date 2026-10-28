@@ -58,6 +58,7 @@ $ALL_TEST_NAMES = @(
     "VSCodeTestSrcBreakpointResolve"
     "VSCodeTestEnum"
     "VSCodeTestEvalTimeout"
+    "VSCodeTestExceptionInfoEvalTimeout"
     "VSCodeTestAsyncStepping"
     "VSCodeTestBreak"
     "VSCodeTestNoJMCNoFilterStepping"
